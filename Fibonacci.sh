@@ -1,18 +1,12 @@
-clear
-echo "Program to Find Fibonacci Series"
-  echo "How many number of terms to be generated ?"
-  n=6
-  x=0
-  y=1
-  i=2
-  echo "Fibonacci Series up to $n terms :"
-  echo "$x"
-  echo "$y"
-  while [ $i -lt $n ]
-  do
-      i=`expr $i + 1 `
-      z=`expr $x + $y `
-      echo "$z"
-      x=$y
-      y=$z
-  done
+N=6 
+a=0 
+b=1  
+echo "The Fibonacci series is : "
+   
+for (( i=0; i<N; i++ )) 
+do
+    echo -n "$a "
+    fn=$((a + b)) 
+    a=$b 
+    b=$fn 
+done
